@@ -12,10 +12,10 @@ public class Rogue extends Character {
 		
 		
 	//Methods:
-		/*public int stab() {
-			int damage;
+		public int stab() {
 			
+			return attack;
 			
 		}
-*/
+
 }

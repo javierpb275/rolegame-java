@@ -9,5 +9,12 @@ public class Wizard extends Character {
 			defense = 5;
 			
 		}
+		
+	//Methods:
+		public int fireBall() {
+					
+			return attack;
+					
+		}
 
 }

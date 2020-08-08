@@ -9,5 +9,12 @@ public class Warrior extends Character {
 		defense = 15;
 		
 	}
+	
+	//Methods:
+		public int smash() {
+				
+			return attack;
+				
+		}
 
 }
