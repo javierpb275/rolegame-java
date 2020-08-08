@@ -5,7 +5,7 @@ public class Warrior extends Character {
 	//Constructor
 	public Warrior() {
 		
-		damage = 5;
+		attack = 5;
 		defense = 15;
 		
 	}

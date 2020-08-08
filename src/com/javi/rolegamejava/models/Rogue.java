@@ -5,9 +5,17 @@ public class Rogue extends Character {
 	//Constructor
 		public Rogue() {
 			
-			damage = 10;
+			attack = 10;
 			defense = 10;
 			
 		}
-
+		
+		
+	//Methods:
+		/*public int stab() {
+			int damage;
+			
+			
+		}
+*/
 }

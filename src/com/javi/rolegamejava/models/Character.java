@@ -6,16 +6,16 @@ public class Character extends User {
 	//protected attributes so that its child can have access to them.
 	protected String name;
 	protected String race;
-	protected int damage;
+	protected int attack;
 	protected int defense;
 	
 	//Constructors
-	public Character(String username, String email, String password, String name, String race, int damage,
+	public Character(String username, String email, String password, String name, String race, int attack,
 			int defense) {
 		super(username, email, password);
 		this.name = name;
 		this.race = race;
-		this.damage = damage;
+		this.attack = attack;
 		this.defense = defense;
 	}
 	
@@ -40,12 +40,12 @@ public class Character extends User {
 		this.race = race;
 	}
 
-	public int getDamage() {
-		return damage;
+	public int getAttack() {
+		return attack;
 	}
 
-	public void setDamage(int damage) {
-		this.damage = damage;
+	public void setAttack(int attack) {
+		this.attack = attack;
 	}
 
 	public int getDefense() {

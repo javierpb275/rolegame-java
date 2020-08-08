@@ -5,7 +5,7 @@ public class Wizard extends Character {
 	//Constructor
 		public Wizard() {
 			
-			damage = 15;
+			attack = 15;
 			defense = 5;
 			
 		}
