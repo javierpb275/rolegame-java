@@ -1,5 +1,6 @@
 package com.javi.rolegamejava.models;
 
+//This is one of the children class, which extends from character
 public class Wizard extends Character {
 	
 	//Constructor

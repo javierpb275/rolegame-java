@@ -1,7 +1,7 @@
 package com.javi.rolegamejava.models;
 
-//This is the parent class, which extends from User (grandparent class)
-public class Character extends User {
+//This is the parent class and their children are Warrior, Wizard and Rogue
+public class Character {
 	
 	//protected attributes so that its child can have access to them.
 	protected String name;
@@ -10,9 +10,9 @@ public class Character extends User {
 	protected int defense;
 	
 	//Constructors
-	public Character(String username, String email, String password, String name, String race, int attack,
+	public Character(String name, String race, int attack,
 			int defense) {
-		super(username, email, password);
+		super();
 		this.name = name;
 		this.race = race;
 		this.attack = attack;

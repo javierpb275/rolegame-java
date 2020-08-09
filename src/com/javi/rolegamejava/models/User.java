@@ -2,7 +2,7 @@ package com.javi.rolegamejava.models;
 
 import java.util.Vector;
 
-//This is the grandparent class, which is the user that registers and signs in.
+//This is the user that registers and signs in.
 public class User {
 	
 	//private attributes since only user can have access to them.
