@@ -60,6 +60,17 @@ public class User {
 	}
 	
 	
+	//Methods:
+	
+	//Create new Character:
+	
+	public void createCharacter(Character userCharacter) {
+		
+		  listOfCharacters.add(userCharacter);
+		 
+		  count++;
+		
+	}
 	
 	
 
