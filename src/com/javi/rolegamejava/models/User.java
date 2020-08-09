@@ -13,7 +13,7 @@ public class User {
 	//This is an array (Vector) of Characters that each User may have
 	private int count = 0;
 	
-	private Vector<Character> listOfCharacters = new Vector<Character>();
+	private Vector<Character> listOfCharacters = new Vector<Character>();//We use the Vector class to create a vector of objects
 	
 	//Constructors:
 	public User(String username, String email, String password) {
@@ -65,7 +65,7 @@ public class User {
 	//Create new Character:
 	public void createCharacter(Character userCharacter) {
 		
-		  listOfCharacters.add(userCharacter);
+		  listOfCharacters.add(userCharacter);//This add method comes with the Vector class and it adds a new Character to the vector
 		 
 		  count++;
 		
@@ -75,7 +75,7 @@ public class User {
 	public Character chooseCharacter(int i) {
 		
 		if (i < count) {
-			return listOfCharacters.elementAt(i);
+			return listOfCharacters.elementAt(i);//This elementAt() method comes with the Vector class and it allows us to select an element of the vector
 		}
 		
 		else {
