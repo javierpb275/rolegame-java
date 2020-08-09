@@ -1,5 +1,7 @@
 package com.javi.rolegamejava.models;
 
+import java.util.Vector;
+
 //This is the grandparent class, which is the user that registers and signs in.
 public class User {
 	
@@ -7,6 +9,11 @@ public class User {
 	private String username;
 	private String email;
 	private String password;
+	
+	//This is an array (Vector) of Characters that each User may have
+	private int count = 0;
+	
+	private Vector<Character> listOfCharacters = new Vector<Character>();
 	
 	//Constructors:
 	public User(String username, String email, String password) {
