@@ -84,6 +84,35 @@ public class User {
 		
 	}
 	
+	//Show list of Characters with their characteristics:
+	public void showListOfCharacters() {
+		System.out.println("You have: " + count + " Characters");
+		
+		for(int i = 0; i < count; i++) {
+			
+			Character character = listOfCharacters.elementAt(i);
+			
+			
+			if (character instanceof Warrior) {
+				System.out.println("Nº: " + i + " Race: " + character.race + " Class: Warrior"  + 
+						" Name: " + character.name + " Attack: " + character.attack + " Defense: " + character.defense);
+			}
+			
+			else if (character instanceof Wizard) {
+				System.out.println("Nº: " + i + " Race: " + character.race + " Class: Wizard"  + 
+						" Name: " + character.name + " Attack: " + character.attack + " Defense: " + character.defense);
+			}
+			
+			else if (character instanceof Rogue) {
+				System.out.println("Nº: " + i + " Race: " + character.race + " Class: Rogue"  + 
+						" Name: " + character.name + " Attack: " + character.attack + " Defense: " + character.defense);
+			}
+			
+		}
+			
+			
+	}
+	
 	
 
 }
