@@ -11,9 +11,11 @@ public class Wizard extends Character {
 		}
 		
 	//Methods:
-		public int fireBall() {
+		
+		//This method is used to attack the enemy and lower their defense
+		public int fireBall(Character enemy) {
 					
-			return attack;
+			return enemy.defense -= this.attack;
 					
 		}
 

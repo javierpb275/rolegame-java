@@ -11,9 +11,11 @@ public class Warrior extends Character {
 	}
 	
 	//Methods:
-		public int smash() {
+	
+	//This method is used to attack the enemy and lower their defense
+		public int smash(Character enemy) {
 				
-			return attack;
+			return enemy.defense -= this.attack;
 				
 		}
 
