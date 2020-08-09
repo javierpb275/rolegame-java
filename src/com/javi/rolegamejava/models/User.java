@@ -63,12 +63,24 @@ public class User {
 	//Methods:
 	
 	//Create new Character:
-	
 	public void createCharacter(Character userCharacter) {
 		
 		  listOfCharacters.add(userCharacter);
 		 
 		  count++;
+		
+	}
+	
+	//Choose Character:
+	public Character chooseCharacter(int i) {
+		
+		if (i < count) {
+			return listOfCharacters.elementAt(i);
+		}
+		
+		else {
+			return null;
+		}
 		
 	}
 	
