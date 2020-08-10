@@ -20,7 +20,7 @@ public class Main {
 		 String race;
 		 int userclass;
 		
-		//This the Scanner class to be able to type info in the console
+		//This is the Scanner class to be able to type info in the console
 		Scanner s = new Scanner(System.in);
 		
 		
@@ -45,7 +45,7 @@ public class Main {
 		
 		
 		//Create a new character
-		System.out.println("Please, enter your the name of your character:");
+		System.out.println("Please, enter the name of your character:");
 		name = s.nextLine();
 		
 		System.out.println("Please, enter your race:");
