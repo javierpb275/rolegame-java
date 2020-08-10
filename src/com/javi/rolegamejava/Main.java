@@ -17,8 +17,9 @@ public class Main {
 		 String password;
 		 
 		 String name;
-		 String race;
-		 int userclass;
+		 Character myCharacter;
+		 int chooseClass;
+		 int chooseRace;
 		
 		//This is the Scanner class to be able to type info in the console
 		Scanner s = new Scanner(System.in);
@@ -45,36 +46,65 @@ public class Main {
 		
 		
 		//Create a new character
+		
 		System.out.println("Please, enter the name of your character:");
 		name = s.nextLine();
 		
-		System.out.println("Please, enter your race:");
-		race = s.nextLine();
 		
 		System.out.println("Please, choose a class:");
 		System.out.println("1) Warrior");
 		System.out.println("2) Wizard");
 		System.out.println("3) Rogue");
-		userclass = s.nextInt();
+		chooseClass = s.nextInt();
 		
-		switch(userclass) {
+		
+		switch(chooseClass) {
+		
 		case 1:
-			Character myWarrior = new Warrior();
-			myWarrior.setName(name);
-			myWarrior.setRace(race);
+			myCharacter = new Warrior();
+			
 			break;
 		case 2:
-			Character myWizard = new Wizard();
-			myWizard.setName(name);
-			myWizard.setRace(race);
+			myCharacter = new Wizard();
+			
 			break;
 		case 3:
-			Character myRogue = new Rogue();
-			myRogue.setName(name);
-			myRogue.setRace(race);
+			myCharacter = new Rogue();
+			
 			break;
+		default:
+			myCharacter = null;
+			
 		}
 		
+		
+		System.out.println("Please, choose a race:");
+		System.out.println("1) Human");
+		System.out.println("2) Elf");
+		System.out.println("3) Dwarf");
+		chooseRace = s.nextInt();
+		
+		switch(chooseRace) {
+		
+		case 1:
+			myCharacter.setRace("Human");
+			break;
+		case 2:
+			myCharacter.setRace("Elf");
+			break;
+		case 3:
+			myCharacter.setRace("Dwarf");
+			break;
+		default:
+			myCharacter = null;
+			
+		}
+		
+		
+		myCharacter.setName(name);
+		
+		//checking if we can print the character info:
+		System.out.println("My name is " + myCharacter.getName() + ". I am a/an " + myCharacter.getRace());
 		
 	}
 
