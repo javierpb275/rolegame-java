@@ -18,21 +18,23 @@ public class Main {
 		 
 		 String name;
 		 Character myCharacter;
+		 
 		 int chooseClass;
 		 int chooseRace;
+		 int chooseCharacter;
 		
 		//This is the Scanner class to be able to type info in the console
 		Scanner s = new Scanner(System.in);
 		
 		
 		//We ask the user info:
-		System.out.println("Please, enter your username:");
+		System.out.println("\nPlease, enter your username:");
 		username = s.nextLine();
 		
-		System.out.println("Please, enter your email:");
+		System.out.println("\nPlease, enter your email:");
 		email = s.nextLine();
 		
-		System.out.println("Please, enter your password:");
+		System.out.println("\nPlease, enter your password:");
 		password = s.nextLine();
 		
 		//create new user
@@ -41,17 +43,17 @@ public class Main {
 		
 		
 		//checking if we can print the user info:
-		System.out.println("I am " + user.getUsername() + ". My email is " + user.getEmail() + ". My password is " + user.getPassword());
+		System.out.println("\nI am " + user.getUsername() + ". My email is " + user.getEmail() + ". My password is " + user.getPassword());
 
 		
 		
 		//Create a new character
 		
-		System.out.println("Please, enter the name of your character:");
+		System.out.println("\nPlease, enter the name of your character:");
 		name = s.nextLine();
 		
 		
-		System.out.println("Please, choose a class:");
+		System.out.println("\nPlease, choose a class:");
 		System.out.println("1) Warrior");
 		System.out.println("2) Wizard");
 		System.out.println("3) Rogue");
@@ -78,7 +80,7 @@ public class Main {
 		}
 		
 		
-		System.out.println("Please, choose a race:");
+		System.out.println("\nPlease, choose a race:");
 		System.out.println("1) Human");
 		System.out.println("2) Elf");
 		System.out.println("3) Dwarf");
@@ -103,8 +105,24 @@ public class Main {
 		
 		myCharacter.setName(name);
 		
-		//checking if we can print the character info:
-		System.out.println("My name is " + myCharacter.getName() + ". I am a/an " + myCharacter.getRace());
+		
+		
+		//Adding character to the list:
+		user.addCharacter(myCharacter);
+		System.out.println("\n" + myCharacter.getName() + " was added to your list of characters");
+		
+		
+		//Choose your character:
+		System.out.println("\nChoose a Character:\n");
+		user.showListOfCharacters();
+		
+		chooseCharacter = s.nextInt();
+		
+		Character theCharacter = user.chooseCharacter(chooseCharacter);
+		
+		System.out.println("Your character is:\n");
+		
+		System.out.println(theCharacter.getName() + "\n");
 		
 	}
 
