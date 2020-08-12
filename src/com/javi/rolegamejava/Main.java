@@ -1,5 +1,6 @@
 package com.javi.rolegamejava;
 
+import java.util.Random;
 import java.util.Scanner;
 
 import com.javi.rolegamejava.models.User;
@@ -22,6 +23,10 @@ public class Main {
 		 int chooseClass;
 		 int chooseRace;
 		 int chooseCharacter;
+		 
+		//This is the Random class which returns a random number
+		 Random rand = new Random(System.nanoTime());
+		 
 		
 		//This is the Scanner class to be able to type info in the console
 		Scanner s = new Scanner(System.in);
@@ -123,6 +128,7 @@ public class Main {
 		System.out.println("Your character is:\n");
 		
 		System.out.println(myCharacter.getName() + "\n");
+		
 		
 		
 		
