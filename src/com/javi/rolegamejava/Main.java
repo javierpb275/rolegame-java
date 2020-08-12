@@ -11,6 +11,8 @@ import com.javi.rolegamejava.models.Rogue;
 
 public class Main {
 
+	
+	 
 	public static void main(String[] args) {
 		
 		 String username;
@@ -19,15 +21,20 @@ public class Main {
 		 
 		 String name;
 		 Character theCharacter;
+		 Character theEnemy;
 		 
 		 int chooseClass;
 		 int chooseRace;
 		 int chooseCharacter;
+		 int answer;
+		 
+		 
 		 
 		//This is the Random class which returns a random number
 		 Random rand = new Random(System.nanoTime());
-		 
 		
+		 
+		 
 		//This is the Scanner class to be able to type info in the console
 		Scanner s = new Scanner(System.in);
 		
@@ -130,6 +137,34 @@ public class Main {
 		System.out.println(myCharacter.getName() + "\n");
 		
 		
+		//Enemy created:
+		int randomEnemy = rand.nextInt(2);//number between 0 - 2
+		
+		switch(randomEnemy) {
+		
+		case 0:
+			theEnemy = new Warrior();
+			theEnemy.setRace("Dwarf");
+			
+			break;
+		case 1:
+			theEnemy = new Wizard();
+			theEnemy.setRace("Human");
+			
+			break;
+		case 2:
+			theEnemy = new Rogue();
+			theEnemy.setRace("Elf");
+			break;
+		default:
+			theEnemy = null;
+			
+		}
+		
+		System.out.println("\nA/An " + theEnemy.getRace() + " enemy has shown up" + "\n");
+		
+		//Battle:
+		System.out.println("\nDo you want to fight? Y/N \n");
 		
 		
 	}
