@@ -26,7 +26,7 @@ public class Main {
 		 int chooseClass;
 		 int chooseRace;
 		 int chooseCharacter;
-		 int answer;
+		 
 		 
 		 
 		 
@@ -164,8 +164,22 @@ public class Main {
 		System.out.println("\nA/An " + theEnemy.getRace() + " enemy has shown up" + "\n");
 		
 		//Battle:
-		System.out.println("\nDo you want to fight? Y/N \n");
+		System.out.println("\nDo you want to fight? 1)Yes 2)No \n");
 		
+		int answer = s.nextInt();
+		
+		
+		do {
+			int random = rand.nextInt(10);//number between 0 - 10
+			
+			myCharacter.attacks(theEnemy, random);
+			
+			theEnemy.attacks(myCharacter, random);
+			
+		}
+		
+		while(answer == 1 && myCharacter.getDefense() > 0 && theEnemy.getDefense() > 0);
+			
 		
 	}
 

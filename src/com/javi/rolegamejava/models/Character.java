@@ -63,11 +63,53 @@ public class Character {
 		public void attacks(Character enemy, int random) {
 			
 					if (random <= 5)	{
+						
+						System.out.println("\n" + this.getName() + " attacks " + enemy.getName() + "\n");
+						
 						enemy.defense -= this.attack;
+						
+						System.out.println(enemy.getName() + " has " + enemy.getDefense() + " points of defense \n");
+						
+						
+						if(enemy.defense <= 0) {
+							System.out.println("You have defeated your enemy! You Win!");
+						}
+						
+						else {
+							System.out.println("\n" + enemy.getName() + " attacks " + this.getName() + "\n");
+							
+							this.defense -= enemy.attack;
+							
+							System.out.println(this.getName() + " has " + this.getDefense() + " points of defense \n");
+						}
 					}
 					
-					else {
-						System.out.println("Attack missed!");
+					else if (random >= 6) {
+						
+						System.out.println("\n" + enemy.getName() + " attacks " + this.getName() + "\n");
+						
+						this.defense -= enemy.attack;
+						
+						System.out.println(this.getName() + " has " + this.getDefense() + " points of defense \n");
+						
+						
+						if(this.defense <= 0) {
+							System.out.println("\nYou have been defeated! You Lose!\n");
+						}
+						
+						
+						else {
+							System.out.println("\n" + this.getName() + " attacks " + enemy.getName() + "\n");
+							
+							enemy.defense -= this.attack;
+							
+							System.out.println(enemy.getName() + " has " + enemy.getDefense() + " points of defense \n");
+							
+							if(enemy.defense <= 0) {
+								System.out.println("\nYou have defeated your enemy! You Win!\n");
+							}
+						}
+						
 					}
 			
 							
