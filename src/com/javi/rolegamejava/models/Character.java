@@ -60,9 +60,16 @@ public class Character {
 	//Methods:
 	
 	//This method is used to attack the enemy and lower their defense
-		public int attacks(Character enemy) {
-							
-			return enemy.defense -= this.attack;
+		public void attacks(Character enemy, int random) {
+			
+					if (random <= 5)	{
+						enemy.defense -= this.attack;
+					}
+					
+					else {
+						System.out.println("Attack missed!");
+					}
+			
 							
 		}
 	
