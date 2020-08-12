@@ -17,7 +17,7 @@ public class Main {
 		 String password;
 		 
 		 String name;
-		 Character myCharacter;
+		 Character theCharacter;
 		 
 		 int chooseClass;
 		 int chooseRace;
@@ -63,19 +63,19 @@ public class Main {
 		switch(chooseClass) {
 		
 		case 1:
-			myCharacter = new Warrior();
+			theCharacter = new Warrior();
 			
 			break;
 		case 2:
-			myCharacter = new Wizard();
+			theCharacter = new Wizard();
 			
 			break;
 		case 3:
-			myCharacter = new Rogue();
+			theCharacter = new Rogue();
 			
 			break;
 		default:
-			myCharacter = null;
+			theCharacter = null;
 			
 		}
 		
@@ -89,27 +89,27 @@ public class Main {
 		switch(chooseRace) {
 		
 		case 1:
-			myCharacter.setRace("Human");
+			theCharacter.setRace("Human");
 			break;
 		case 2:
-			myCharacter.setRace("Elf");
+			theCharacter.setRace("Elf");
 			break;
 		case 3:
-			myCharacter.setRace("Dwarf");
+			theCharacter.setRace("Dwarf");
 			break;
 		default:
-			myCharacter = null;
+			theCharacter = null;
 			
 		}
 		
 		
-		myCharacter.setName(name);
+		theCharacter.setName(name);
 		
 		
 		
 		//Adding character to the list:
-		user.addCharacter(myCharacter);
-		System.out.println("\n" + myCharacter.getName() + " was added to your list of characters");
+		user.addCharacter(theCharacter);
+		System.out.println("\n" + theCharacter.getName() + " was added to your list of characters");
 		
 		
 		//Choose your character:
@@ -118,11 +118,13 @@ public class Main {
 		
 		chooseCharacter = s.nextInt();
 		
-		Character theCharacter = user.chooseCharacter(chooseCharacter);
+		Character myCharacter = user.chooseCharacter(chooseCharacter);
 		
 		System.out.println("Your character is:\n");
 		
-		System.out.println(theCharacter.getName() + "\n");
+		System.out.println(myCharacter.getName() + "\n");
+		
+		
 		
 	}
 

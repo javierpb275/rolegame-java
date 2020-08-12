@@ -62,7 +62,7 @@ public class User {
 	
 	//Methods:
 	
-	//Create new Character:
+	//Add new Character to the list:
 	public void addCharacter(Character userCharacter) {
 		
 		  listOfCharacters.add(userCharacter);//This add method comes with the Vector class and it adds a new Character to the vector
