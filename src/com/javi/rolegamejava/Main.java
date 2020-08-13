@@ -161,6 +161,8 @@ public class Main {
 			
 		}
 		
+		theEnemy.setName("Enemy");
+		
 		System.out.println("\nA/An " + theEnemy.getRace() + " enemy has shown up" + "\n");
 		
 		//Battle:
@@ -170,15 +172,32 @@ public class Main {
 		
 		
 		do {
-			int random = rand.nextInt(10);//number between 0 - 10
 			
-			myCharacter.attacks(theEnemy, random);
+			myCharacter.attacks(theEnemy);
 			
-			theEnemy.attacks(myCharacter, random);
+			
+			if (theEnemy.getDefense() > 0) {
+				
+				theEnemy.attacks(myCharacter);
+				
+				}
+				
+				else {
+					System.out.println("");
+				}
+			
+			
+			if (theEnemy.getDefense() <= 0) {
+				System.out.println(myCharacter.getName() + " has won.\n");
+			}
+			
+			else if (myCharacter.getDefense() <= 0){
+				System.out.println(theEnemy.getName() + " has won.\n");
+			}
 			
 		}
 		
-		while(answer == 1 && myCharacter.getDefense() > 0 && theEnemy.getDefense() > 0);
+		while(answer == 1 && (myCharacter.getDefense() > 0 && theEnemy.getDefense() > 0));
 			
 		
 	}

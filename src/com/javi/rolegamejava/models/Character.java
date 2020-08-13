@@ -1,5 +1,7 @@
 package com.javi.rolegamejava.models;
 
+import java.util.Random;
+
 //This is the parent class and their children are Warrior, Wizard and Rogue
 public class Character {
 	
@@ -8,6 +10,10 @@ public class Character {
 	protected String race;
 	protected int attack;
 	protected int defense;
+	
+	//This is the Random class which returns a random number
+	Random rand = new Random(System.nanoTime());
+		
 	
 	//Constructors
 	public Character(String name, String race, int attack,
@@ -60,60 +66,28 @@ public class Character {
 	//Methods:
 	
 	//This method is used to attack the enemy and lower their defense
-		public void attacks(Character enemy, int random) {
+		public void attacks(Character enemy) {
 			
-					if (random <= 5)	{
-						
-						System.out.println("\n" + this.getName() + " attacks " + enemy.getName() + "\n");
-						
-						enemy.defense -= this.attack;
-						
-						System.out.println(enemy.getName() + " has " + enemy.getDefense() + " points of defense \n");
-						
-						
-						if(enemy.defense <= 0) {
-							System.out.println("You have defeated your enemy! You Win!");
-						}
-						
-						else {
-							System.out.println("\n" + enemy.getName() + " attacks " + this.getName() + "\n");
-							
-							this.defense -= enemy.attack;
-							
-							System.out.println(this.getName() + " has " + this.getDefense() + " points of defense \n");
-						}
-					}
+			System.out.println("\n" + this.getName() + " attacks " + enemy.getName() + "\n");
+				
+				int random = rand.nextInt(10);//number between 0 - 10
+				
+				
+				if (random <= 5)	{
+
+					enemy.defense -= this.attack;
+
+					System.out.println(enemy.getName() + " has " + enemy.getDefense() + " points of defense \n");
 					
-					else if (random >= 6) {
-						
-						System.out.println("\n" + enemy.getName() + " attacks " + this.getName() + "\n");
-						
-						this.defense -= enemy.attack;
-						
-						System.out.println(this.getName() + " has " + this.getDefense() + " points of defense \n");
-						
-						
-						if(this.defense <= 0) {
-							System.out.println("\nYou have been defeated! You Lose!\n");
-						}
-						
-						
-						else {
-							System.out.println("\n" + this.getName() + " attacks " + enemy.getName() + "\n");
-							
-							enemy.defense -= this.attack;
-							
-							System.out.println(enemy.getName() + " has " + enemy.getDefense() + " points of defense \n");
-							
-							if(enemy.defense <= 0) {
-								System.out.println("\nYou have defeated your enemy! You Win!\n");
-							}
-						}
-						
+					
+					
+				} else {
+					
+					System.out.println("\n" + this.getName() + " missed the attack \n");
+					
 					}
-			
-							
+				
+				
 		}
-	
-		
+							
 }
